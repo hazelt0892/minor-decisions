@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <main>
+        <section id="heading">
+            <div class="banner">
+                <h1>{{headline[0]}}</h1>
+                <p>{{headline[1]}}</p>
+            </div>
+            <div id="today">
+                <p>Today's question</p>
+                <h3>QUESTION</h3>
+                <button>Consider this question &#8594</button>
+            </div>
+        </section>
+        <section>
+            <h2>Browse by category</h2>
+            <div class="categories">
+                <a href="/category/all">
+                    <h3>All</h3>
+                    <p>Explore all dilemmas</p>
+                </a>
+                <a href="/category/everyday">
+                    <h3>Everyday life</h3>
+                    <p>Daily dilemmas</p>
+                </a>
+                <a href="/category/social">
+                    <h3>Social matters</h3>
+                    <p>People and relationships</p>
+                </a>
+                <a href="/category/shopping">
+                    <h3>Shopping</h3>
+                    <p>To buy or not to buy</p>
+                </a>
+                <a href="/category/food">
+                    <h3>Food and drink</h3>
+                    <p>What's on the menu?</p>
+                </a>
+                <a href="/category/seasonal">
+                    <h3>Seasonal</h3>
+                    <p>Festive shenanigans</p>
+                </a>
+            </div>
+        </section>
+        <section id="surprise">
+            <h2>I can't decide what to decide.</h2>
+            <p>No worries, we've got you.</p>
+            <button>Surprise me</button>
+        </section>
+    </main>
+    <footer>
+        <h3>minor decisions.</h3>
+        <p>For the indecisive.</p>
+        <p id="made">Made by Hazel</p>
+        <div id="docs">
+            <a>Privacy policy</a>
+            <p>·</p>
+            <a>Terms of use</a>
+        </div>
+    </footer>
+{% endblock %}

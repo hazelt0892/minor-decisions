@@ -1,0 +1,54 @@
+
+.banner {
+    margin: 32px 0;
+    text-align: center;
+}
+
+#today {
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#today p {
+    margin: 0;
+}
+
+.categories {
+    display: grid;
+}
+
+.categories a {
+    margin: 8px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#surprise {
+    text-align: center;
+}
+
+#surprise h2 {
+    margin-bottom: 8px;
+}
+
+#docs {
+    display: flex;
+    flex-direction: row;
+    margin: 4px;
+    justify-content: center;
+}
+
+#docs p {
+    margin: 0 4px;
+}
+
+@media (min-width: 768px) {
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

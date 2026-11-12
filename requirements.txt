@@ -1,0 +1,4 @@
+Flask
+json 
+sqlite3
+glob

@@ -1,0 +1,125 @@
+/* layout.html */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo {
+    margin: 16px;
+    font-size: var(--logo-font);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: 0.3s;
+    background-color: #fff0f0;
+}
+
+#hamburger {
+    display: inline-block;
+    position: absolute;
+    margin: 16px 16px;
+}
+
+#hamburger-1, #hamburger-2, #hamburger-3 {
+    height: 5px;
+    width: 35px;
+    margin: 6px 0px;
+    transition: 0.4s;
+    background-color: #000000;
+}
+
+.change #hamburger-1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change #hamburger-2 {
+    opacity: 0;
+}
+
+.change #hamburger-3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex: 1;
+    padding: 32px 0 64px 32px;
+    justify-content: space-between;
+}
+
+nav li {
+    display: none;
+    transition: 0.4s;
+    margin: 16px;
+    list-style: none;
+    font-size: 30px;
+}
+
+nav li.active {
+    display: block;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    nav {
+        height: 10vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .logo {
+        position: static;
+        z-index: 20;
+        padding: 0 16px;
+    }
+
+    #menu {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        flex: 1;
+        background-color: transparent;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        margin: 0 50px 0 0;
+        padding: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        font-size: 15px;
+    }
+}

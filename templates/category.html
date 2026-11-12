@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ category }}
+{% endblock %}
+
+{% block main %}
+    <main>
+        <h2>{{ category }}</h2>
+        <div class="trees">
+            {% for tree in trees %}
+                <div>
+                    {% for category in tree["categories"].split(",") %}
+                        <span>{{ category.capitalize() }}</span>
+                    {% endfor %}
+                    <h3>{{ tree["title"] }}</h3>
+                    <form action="/tree/{{ tree['slug'] }}">
+                        <button>Consider this question &#8594</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+{% endblock %}

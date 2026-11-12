@@ -1,0 +1,47 @@
+{
+    "title": "Should I bring an umbrella?",
+    "categories": ["everyday"],
+    "start": "raining",
+    "nodes": {
+        "raining": {
+            "text": "Is it raining right now?",
+            "yes": "heavy",
+            "no": "forecast"
+        },
+        "heavy": {
+            "text": "How heavy is the rain?",
+            "options": [
+                {"label": "light", "next": "windy"},
+                {"label": "heavy", "next": "bring"}
+            ]
+        },
+        "forecast": {
+            "text": "Does the weather forecast say rain today?",
+            "yes": "outside",
+            "no": "no_bother"
+        },
+        "windy": {
+            "text": "Is it windy?",
+            "yes": "flimsy",
+            "no": "hair"
+        },
+        "outside": {
+            "text": "Will you be outside for a long time?",
+            "yes": "hair",
+            "no": "jacket"
+        },
+        "flimsy": {
+            "text": "Is your umbrella flimsy?",
+            "yes": "jacket",
+            "no": "hair"
+        },
+        "hair": {
+            "text": "Does your hair matter today?",
+            "yes": "bring",
+            "no": "jacket"
+        },
+        "no_bother": {"text": "Don't bother.", "result": true},
+        "jacket": {"text": "Take a jacket, leave the umbrella.", "result": true},
+        "bring": {"text": "Bring the umbrella.", "result": true}
+    }
+}

@@ -1,0 +1,56 @@
+:root {
+    --logo-font: 20px;
+}
+
+body {
+    font-family: "DM sans", sans-serif;
+    font-weight: 400;
+    background-color: #fcf2ec;
+}
+
+section {
+    padding: 8px;
+}
+
+h1 {
+    margin: 8px;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 16px 8px;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #f4f3f4;
+}
+
+footer {
+    padding: 8px 16px;
+}
+
+
+
+@media (min-width: 768px) {
+    #web {
+        margin: 10vh 0 0 0;
+    }
+}

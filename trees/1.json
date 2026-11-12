@@ -1,0 +1,41 @@
+{
+    "title": "Is it too early to decorate for Christmas?",
+    "categories": ["seasonal"],
+    "start": "two_weeks",
+    "nodes": {
+        "two_weeks": {
+            "text": "Is Christmas within 2 weeks?",
+            "yes": "late",
+            "no": "music"
+        },
+        "music": {
+            "text": "Have you heard Christmas music in a shop?",
+            "yes": "cat",
+            "no": "mariah"
+        },
+        "mariah": {
+            "text": "Has Mariah Carey defrosted?",
+            "yes": "others",
+            "no": "early"
+        },
+        "cat": {
+            "text": "Do you have a cat?",
+            "yes": "lights",
+            "no": "go"
+        },
+        "others": {
+            "text": "Do you live with other people?",
+            "yes": "they_think",
+            "no": "cat"
+        },
+        "they_think": {
+            "text": "Do they think it's too early?",
+            "yes": "lights",
+            "no": "go"
+        },
+        "early": {"text": "Yes, it's too early, but go on then.", "result": true},
+        "lights": {"text": "Just do the lights – for now.", "result": true},
+        "go": {"text": "Go for it, decorate away!", "result": true},
+        "late": {"text": "It's too late! DO IT NOW.", "result": true}
+    }
+}

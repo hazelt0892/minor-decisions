@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='navbar.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='home.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <title>Minor Decisions: {% block title %} {% endblock%} </title>
+    </head>
+    <body>
+        <nav>
+            <a href="/" class="logo">minor decisions.</a>
+            <div id="menu">
+                <div id="hamburger" onclick="hamburger(this)">
+                    <div id="hamburger-1"></div>
+                    <div id="hamburger-2"></div>
+                    <div id="hamburger-3"></div>
+                </div>
+                <div class="nav-links">
+                    <ul class="menu-first">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                    <ul class="menu-second">
+                        <li><a class="split" href="/saved">Saved</a></li>
+                        <li><a class="split" href="/account">Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="web"></div>
+        {% block main %}
+
+        {% endblock %}
+    </body>
+</html>

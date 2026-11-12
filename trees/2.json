@@ -1,0 +1,60 @@
+{
+    "title": "Should I buy it?",
+    "categories": ["shopping"],
+    "start": "die",
+    "nodes": {
+        "die": {
+            "text": "Will you die without it?",
+            "yes": "buy",
+            "no": "food"
+        },
+        "afford": {
+            "text": "Can you afford it?",
+            "yes": "food",
+            "no": "no_buy"
+        },
+        "food": {
+            "text": "Is it food?",
+            "yes": "hungry",
+            "no": "own_similar"
+        },
+        "hungry": {
+            "text": "Are you hungry?",
+            "yes": "buy",
+            "no": "emotions_food"
+        },
+        "own_similar": {
+            "text": "Do you already own something that does the same job?",
+            "yes": "no_buy",
+            "no": "emotions"
+        },
+        "emotions_food": {
+            "text": "Are you bored, sad, or stressed?",
+            "yes": "buy",
+            "no": "no_buy"
+        },
+        "emotions": {
+            "text": "Are you bored, sad, or stressed?",
+            "yes": "sleep",
+            "no": "thinking"
+        },
+        "thinking": {
+            "text": "Have you been thinking about it for over a week?",
+            "yes": "sale",
+            "no": "sleep"
+        },
+        "sale": {
+            "text": "Is it on sale?",
+            "yes": "full_price",
+            "no": "buy"
+        },
+        "full_price": {
+            "text": "Would you still buy it at full price?",
+            "yes": "buy",
+            "no": "no_buy"
+        },
+        "no_buy": {"text": "Don't buy it.", "result": true},
+        "sleep": {"text": "Sleep on it for 48 hours.", "result": true},
+        "buy": {"text": "Go on then, you can buy it.", "result": true}
+    }
+}
