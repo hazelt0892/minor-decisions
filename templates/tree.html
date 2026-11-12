@@ -5,13 +5,22 @@
 {% endblock %}
 
 {% block main %}
-    <main>
-        <div id="question_box" data-slug="{{ slug }}">
-            <h1 id="question"></h1>
-            <div id="answers"></div>
+    <main id="main_tree">
+        <div id="question-box" data-slug="{{ slug }}">
+            <div id="verdict-box">
+                <h1 id="verdict">Verdict:</h1>
+            </div>
+            <div id="qna">
+                <h1 id="question"></h1>
+                <div id="answers"></div>
+            </div>
+            <div id="buttons">
+                <button id="back">&#8592 Back</button>
+                <form action="/">
+                    <button id="exit">Exit</button>
+                </form>
+            </div>
         </div>
-        <button id="back">Back</button>
     </main>
-
     <script src="{{ url_for('static', filename='tree.js') }}"></script>
 {% endblock %}

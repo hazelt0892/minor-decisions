@@ -1,12 +1,31 @@
 :root {
     --logo-font: 20px;
+    --background: #fff5f5;
+    --sec-background: #f3e1df;
+    --secondary: #e8d3d0;
+    --accent: #b88979;
+    --sec-text: #6b504c;
+    --text: #493737;
+
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
     font-family: "DM sans", sans-serif;
     font-weight: 400;
-    background-color: #fcf2ec;
+    margin: 0;
+    color: var(--text);
+    background-color: var(--background);
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 
 section {
     padding: 8px;
@@ -33,24 +52,40 @@ p {
 
 a {
     text-decoration: none;
+    color: var(--text);
 }
 
 button {
     padding: 8px;
     margin: 8px 0;
+    min-height: 44px;
+    min-width: 44px;
     border: none;
     border-radius: 10px;
-    background-color: #f4f3f4;
+    color: var(--text);
+    background-color: var(--sec-background);
 }
 
 footer {
     padding: 8px 16px;
+    background-color: var(--sec-background);
 }
 
+footer p, footer a {
+    color: var(--sec-text);
+}
+
+.sec-text {
+    color: var(--sec-text);
+}
 
 
 @media (min-width: 768px) {
     #web {
         margin: 10vh 0 0 0;
+    }
+
+    h2 {
+        margin: 16px;
     }
 }

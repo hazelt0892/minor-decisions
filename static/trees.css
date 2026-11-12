@@ -1,0 +1,86 @@
+.trees {
+    display: grid;
+}
+
+.tree {
+    padding: 16px;
+    margin: 8px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
+
+#main_tree {
+    display: flex;
+    flex-direction: column;
+    min-height: 90dvh;
+}
+
+#question-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 16px 100px 16px;
+    align-items: center;
+    text-align: center;
+}
+
+#verdict-box {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: auto;
+    justify-content: flex-end;
+}
+
+#verdict {
+    display: none;
+}
+
+#answers {
+    display: flex;
+    flex-direction: row;
+}
+
+#answers button {
+    width: 20dvw;
+    margin: 16px 64px;
+    font-size: 20px;
+}
+
+#back {
+    width: 100px;
+    margin: 16px;
+    border: 0.5px solid var(--text);
+    background-color: transparent;
+}
+
+.result {
+    font-style: italic;
+}
+
+#exit {
+    display: none;
+    width: 100px;
+    margin: 16px;
+    border: 0.5px solid var(--text);
+    background: transparent;
+}
+
+#qna {
+    height: 200px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 32px 0;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .trees {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

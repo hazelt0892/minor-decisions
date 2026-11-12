@@ -2,6 +2,7 @@
 nav {
     display: flex;
     flex-direction: row;
+    padding: 8px;
     justify-content: center;
 }
 
@@ -22,13 +23,13 @@ nav {
     left: 0;
     z-index: 10;
     transition: 0.3s;
-    background-color: #fff0f0;
+    background-color: var(--sec-background);
 }
 
 #hamburger {
     display: inline-block;
     position: absolute;
-    margin: 16px 16px;
+    margin: 16px 22px;
 }
 
 #hamburger-1, #hamburger-2, #hamburger-3 {

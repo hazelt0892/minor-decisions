@@ -10,7 +10,7 @@
     margin: 0 32px;
     padding: 16px;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: var(--secondary);
 }
 
 #today p {
@@ -25,7 +25,11 @@
     margin: 8px;
     padding: 16px;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: var(--secondary);
+}
+
+.categories p {
+    color: var(--sec-text);
 }
 
 #surprise {
@@ -36,10 +40,14 @@
     margin-bottom: 8px;
 }
 
+#surprise button {
+    margin: 16px 0;
+}
+
 #docs {
     display: flex;
     flex-direction: row;
-    margin: 4px;
+    margin: 8px;
     justify-content: center;
 }
 
