@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request, session, jsonify
+from flask import Flask, redirect, render_template, request, session, jsonify, url_for
 import sqlite3
 import random
 
@@ -15,9 +15,14 @@ db = con.cursor()
 @app.route("/")
 def home():
     print("CURRENT HOME ROUTE RUNNING")
-    ran = random.randint(0,len(headlines)-1)
-    headline = headlines[ran]
-    return render_template("home.html", headline = headline)
+    ran_headline = random.randint(0,len(headlines)-1)
+    headline = headlines[ran_headline]
+    trees = db.execute("SELECT title, slug FROM trees").fetchall()
+    count = db.execute("SELECT COUNT(title) FROM trees").fetchone()["COUNT(title)"]
+    ran_tree = random.randint(0, count-1)
+    question = trees[ran_tree]["title"]
+    slug = trees[ran_tree]["slug"]
+    return render_template("home.html", headline = headline, question = question, slug = slug)
 
 @app.route("/category/<category>")
 def category(category):
@@ -76,3 +81,8 @@ def data(slug):
         )
 
     return jsonify({"title": tree["title"], "start": tree["start_node_id"], "nodes": nodes})
+
+@app.route("/tree/")
+def surprise():
+    tree = db.execute("SELECT slug FROM trees ORDER BY RANDOM() LIMIT 1").fetchone()
+    return redirect(url_for("tree", slug=tree["slug"]))

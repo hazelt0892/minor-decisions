@@ -17,6 +17,10 @@
     margin: 0;
 }
 
+#today button {
+    width: 100%;
+}
+
 .categories {
     display: grid;
 }

@@ -9,6 +9,10 @@
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -62,6 +66,7 @@ button {
     min-width: 44px;
     border: none;
     border-radius: 10px;
+    font-size: 15px;
     color: var(--text);
     background-color: var(--sec-background);
 }

@@ -13,8 +13,10 @@
             </div>
             <div id="today">
                 <p class="sec-text">Today's question</p>
-                <h3>QUESTION</h3>
-                <button>Consider this question &#8594</button>
+                <h3>{{ question }}</h3>
+                <form action="/tree/{{ slug }}">
+                    <button>Consider this question &#8594</button>
+                </form>
             </div>
         </section>
         <section>
@@ -49,7 +51,9 @@
         <section id="surprise">
             <h2>I can't decide what to decide.</h2>
             <p class="sec-text">No worries, we've got you.</p>
-            <button>Surprise me</button>
+            <form action="/tree/">
+                <button>Surprise me</button>
+            </form>
         </section>
     </main>
     <footer>
