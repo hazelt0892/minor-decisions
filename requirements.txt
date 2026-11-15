@@ -2,3 +2,5 @@ Flask
 json 
 sqlite3
 glob
+os
+dotenv

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="message"></div>
+        <h1 class="center-text">Account</h1>
+        {% if session["user_id"] %}
+            <form action="/logout">
+                <button class="fix-button">Logout</button>
+            </form>
+            <form action="/delete">
+                <button class="fix-button">Delete account</button>
+            </form>
+        {% else %}
+            <div class="log">
+                <a class="a-button fix-button" href="/login">Login</a>
+                <a class="a-button fix-button" href="/register">Register</a>
+            </div>
+        {% endif %}
+    </main>
+    <footer>
+        <h3>minor decisions.</h3>
+        <p>For the indecisive.</p>
+        <p id="made">Made by Hazel <i class="fa-regular fa-heart"></i></p>
+        <div id="docs">
+            <a>Privacy policy</a>
+            <p>·</p>
+            <a>Terms of use</a>
+        </div>
+    </footer>
+{% endblock %}

@@ -41,6 +41,4 @@ CREATE TABLE tree_categories (
     FOREIGN KEY (tree_id) REFERENCES trees(id),
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
-
--- Add users table
--- Add history table 
+ 

@@ -11,6 +11,11 @@
             <div class="trees">
                 {% for tree in trees %}
                     <div class="tree">
+                        {% if tree["saved"] %}
+                            <i class="fa-solid fa-bookmark icon save" data-tree-id="{{ tree['id'] }}"></i>
+                        {% else %}
+                            <i class="fa-regular fa-bookmark icon save" data-tree-id="{{ tree['id'] }}"></i>
+                        {% endif %}
                         {% for category in tree["categories"].split(",") %}
                             <span class="sec-text">{{ category.capitalize() }}</span>
                         {% endfor %}
@@ -26,7 +31,7 @@
     <footer>
         <h3>minor decisions.</h3>
         <p>For the indecisive.</p>
-        <p id="made">Made by Hazel</p>
+        <p id="made">Made by Hazel <i class="fa-regular fa-heart icon"></i></p>
         <div id="docs">
             <a>Privacy policy</a>
             <p>·</p>

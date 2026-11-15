@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="message">
+            {% with message = get_flashed_messages() %}
+                {% if message %}
+                    <p>{{ message[0] }}</p>
+                {% endif %}
+            {% endwith %} 
+        </div>
+        <section class="log">
+            <h1 class="center-text">Login</h1>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button class="fix-button" type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>minor decisions.</h3>
+        <p>For the indecisive.</p>
+        <p id="made">Made by Hazel <i class="fa-regular fa-heart"></i></p>
+        <div id="docs">
+            <a>Privacy policy</a>
+            <p>·</p>
+            <a>Terms of use</a>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="message">
+            {% with message = get_flashed_messages() %}
+                {% if message %}
+                    <p>{{ message[0] }}</p>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <section class="log">
+            <h1 class="center-text">Register</h1>
+            <form action="/register" method="post">
+                <input type="text" placeholder="Username" name="username" id="username" required>
+                <input type="password" placeholder="Password" name="password" id="password" required>
+                <input type="password" placeholder="Re-enter password" name="confirmation" id="confirmation" required>
+                <button class="fix-button" type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>minor decisions.</h3>
+        <p>For the indecisive.</p>
+        <p id="made">Made by Hazel <i class="fa-regular fa-heart"></i></p>
+        <div id="docs">
+            <a>Privacy policy</a>
+            <p>·</p>
+            <a>Terms of use</a>
+        </div>
+    </footer>
+{% endblock %}

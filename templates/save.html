@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Saved
+{% endblock %}
+
+{% block main %}
+    <main>
+            <section>
+            <h2>Saved</h2>
+            <div class="trees">
+                {% if not trees %}
+                    <h1 id="no-saved">No saved decisions</h1>
+                {% endif %}
+                {% for tree in trees %}
+                    <div class="tree">
+                        {% if tree["saved"] %}
+                            <i class="fa-solid fa-bookmark icon save" data-tree-id="{{ tree['id'] }}"></i>
+                        {% else %}
+                            <i class="fa-regular fa-bookmark icon save" data-tree-id="{{ tree['id'] }}"></i>
+                        {% endif %}
+                        {% for category in tree["categories"].split(",") %}
+                            <span class="sec-text">{{ category.capitalize() }}</span>
+                        {% endfor %}
+                        <h3>{{ tree["title"] }}</h3>
+                        <form action="/tree/{{ tree['slug'] }}">
+                            <button>Consider this question &#8594</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>minor decisions.</h3>
+        <p>For the indecisive.</p>
+        <p id="made">Made by Hazel <i class="fa-regular fa-heart icon"></i></p>
+        <div id="docs">
+            <a>Privacy policy</a>
+            <p>·</p>
+            <a>Terms of use</a>
+        </div>
+    </footer>
+{% endblock %}
