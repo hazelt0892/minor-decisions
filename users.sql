@@ -1,6 +1,3 @@
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS saved_trees;
-
 -- Add users table
 CREATE TABLE users (
     id INTEGER PRIMARY KEY,

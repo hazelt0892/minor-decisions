@@ -20,9 +20,11 @@ con = sqlite3.connect("decisions.db", check_same_thread=False)
 con.row_factory = sqlite3.Row
 db = con.cursor()
 
+headline_random = random.Random()
+
 @app.route("/")
 def home():
-    ran_headline = random.randint(0,len(headlines)-1)
+    ran_headline = headline_random.randint(0, len(headlines) - 1)
     headline = headlines[ran_headline]
     trees = db.execute("SELECT title, slug FROM trees").fetchall()
     random.seed(date.today().toordinal())

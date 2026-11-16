@@ -153,6 +153,29 @@ footer p, footer a {
     color: var(--sec-text);
 }
 
+.emoji {
+    font-size: 30px;
+}
+
+.emoji-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.l-icon {
+    font-size: 35px;
+}
+
+.padding-text {
+    padding: 0 8px;
+}
+
+.paragraph {
+    padding: 0 16px;
+    text-align: center;
+}
+
 
 @media (min-width: 768px) {
     #web {
@@ -165,5 +188,10 @@ footer p, footer a {
 
     input {
         width: 500px;
+    }
+
+    .paragraph {
+        padding: 0 100px;
+        text-align: justify;
     }
 }
